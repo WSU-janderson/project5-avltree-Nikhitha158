@@ -116,22 +116,13 @@ protected:
                    const AVLNode* node,
                    size_t depth = 0) const;
 
-    /*
-     * Performs a left rotation around 'node'.
+    //Performs a left rotation around 'node'.
 
-         node                 newRoot
-           \        =>        /    \
-           newRoot         node   ...
-     */
     void rotateLeft(AVLNode*& node);
 
-    /*
-      Performs a right rotation around 'node'.
+    // Performs a right rotation around 'node'.
 
-             node            newRoot
-             /       =>      /    \
-         newRoot          ...    node
-     */
+
     void rotateRight(AVLNode*& node);
 
     // Checks the balance factor of 'node' and performs the appropriate single or double rotation to restore AVL balance.
