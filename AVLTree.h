@@ -16,7 +16,7 @@ using namespace std;
 class AVLTree {
 public:
     using KeyType   = std::string;
-    using ValueType = size_t;
+    using ValueType = int;   // matches test file using int / vector<int>
 
 protected:
     class AVLNode {
@@ -68,12 +68,12 @@ protected:
     size_t   treeSize;
 
     // Recursive helper methods
-    bool    insert(AVLNode*& node, const KeyType& key, ValueType value);
-    bool    remove(AVLNode*& node, const KeyType& key);
-    bool    contains(const AVLNode* node, const KeyType& key) const;
+    bool     insert(AVLNode*& node, const KeyType& key, ValueType value);
+    bool     remove(AVLNode*& node, const KeyType& key);
+    bool     contains(const AVLNode* node, const KeyType& key) const;
     AVLNode* getNode(AVLNode* node, const KeyType& key) const;
 
-    // NOTE: findRange now returns VALUES (ValueType) per spec
+    // findRange returns VALUES in the given key range
     void findRange(const AVLNode* node,
                    const KeyType& lowKey,
                    const KeyType& highKey,
