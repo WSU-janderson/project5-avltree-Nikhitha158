@@ -104,7 +104,7 @@ private:
     // Checks balance factor of 'node' and performs the necessary rotation.
     void balanceNode(AVLNode*& node);
 
-    
+
     void printTree(std::ostream& os,
                    const AVLNode* node,
                    size_t depth = 0) const;
