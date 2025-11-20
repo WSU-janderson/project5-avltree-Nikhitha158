@@ -192,7 +192,7 @@ AVLTree::getNode(AVLNode* node, const KeyType& key) const {
 }
 
 
-// returns reference to value for 'key'. If key is missing, inserts it with default value 0 first.
+// returns reference to value for 'key'.
 AVLTree::ValueType&
 AVLTree::operator[](const KeyType& key) {
     AVLNode* node = getNode(root, key);
