@@ -196,11 +196,11 @@ AVLTree::getNode(AVLNode* node, const KeyType& key) const {
 AVLTree::ValueType&
 AVLTree::operator[](const KeyType& key) {
     AVLNode* node = getNode(root, key);
-    if (!node) {
+    //if (!node) {
         // Key not found → insert with default value 0.
-        insert(key, 0);
-        node = getNode(root, key);
-    }
+       // insert(key, 0);
+     //   node = getNode(root, key);
+ //   }
     return node->value;
 }
 

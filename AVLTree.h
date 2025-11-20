@@ -137,8 +137,8 @@ public:
     // If not found, returns std::nullopt.
     std::optional<ValueType> get(const KeyType& key) const;
 
-    // Map-like operator: returns reference to value for 'key'.
-    // If key does not exist, inserts it with default value 0, then returns reference.
+    //  operator: returns reference to value for 'key'.
+    //
     ValueType& operator[](const KeyType& key);
 
     // Returns a vector of all VALUES whose keys lie between [lowKey, highKey].
